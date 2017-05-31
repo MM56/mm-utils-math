@@ -1,5 +1,5 @@
 {
-  "name": "mm-utils-math",
+  "name": "@merci-michel/mm-utils-math",
   "version": "1.0.0",
   "description": "Merci-Michel - List of utils used for our project",
   "main": "lib/index.js",
