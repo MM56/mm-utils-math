@@ -1,0 +1,15 @@
+
+/build/**
+/coverage/**
+/docs/**
+/jsdoc/**
+/templates/**
+/tests/bench/**
+/tests/fixtures/**
+/tests/performance/**
+/tmp/**
+/src/vendors/**
+/src/vendors/utils/**
+/src/javascript/vendors/**
+/src/javascript/vendors/utils/**
+test.js

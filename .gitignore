@@ -1,0 +1,9 @@
+node_modules
+coverage
+docs
+lib
+.nyc_output
+.history
+.vscode
+*.log
+.DS_Store

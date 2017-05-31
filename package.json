@@ -1,0 +1,64 @@
+{
+  "name": "mm-utils-math",
+  "version": "1.0.0",
+  "description": "Merci-Michel - List of utils used for our project",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "BABEL_ENV=production babel src -d lib",
+    "docs": "node_modules/.bin/jsdoc --configure jsdoc.json --verbose",
+    "docs:deploy": "npm run docs && gh-pages -d docs/ -m 'docs: update'",
+    "test": "ava",
+    "test:watch": "ava --watch --verbose",
+    "test:coverage": "nyc npm test",
+    "prepublish": "npm test && npm run build"
+  },
+  "author": "MM56",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MM56/mm-utils-math.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MM56/mm-utils-math/issues"
+  },
+  "homepage": "https://github.com/MM56/mm-utils-math",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.18.1",
+    "babel-cli": "^6.22.2",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-runtime": "^6.22.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "babelify": "^7.3.0",
+    "gh-pages": "^0.12.0",
+    "jsdoc": "^3.4.3",
+    "minami": "nijikokun/minami",
+    "nyc": "^10.1.2"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-0"
+    ],
+    "plugins": [
+      "add-module-exports"
+    ],
+    "ignore": "test.js",
+    "env": {
+      "development": {
+        "sourceMaps": "inline",
+        "plugins": [
+          "transform-runtime"
+        ]
+      }
+    }
+  },
+  "ava": {
+    "files": [
+      "test/*.js"
+    ],
+    "require": [
+      "babel-core/register"
+    ]
+  }
+}
